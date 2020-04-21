@@ -267,7 +267,7 @@ MonoBehaviour:
   OffsetY: 1
   OffsetZ: 0
   LimiteCamDown: -90
-  LimiteCamUp: 0
+  LimiteCamUp: 40
   Cam: {fileID: 2101784195}
   Player: {fileID: 2113207636}
 --- !u!1 &1221826828
