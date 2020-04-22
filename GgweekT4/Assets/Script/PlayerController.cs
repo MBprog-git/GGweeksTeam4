@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
      float speed;
 
+    public bool CanMove = true;
   
     public bool _Grounded;
     float Gravity;
@@ -48,38 +49,41 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-          //Move Velocity
-          if (Avant)
-          {
-            transform.position += transform.forward * Time.deltaTime * speed;
-           
-          }
-          if (Reculer)
-          {
-            transform.position -= transform.forward * Time.deltaTime * speed;
-         
-          }
-          if (Droite)
-          {
-            transform.position += transform.right * Time.deltaTime * speed;
-           
-          }
-          if (Gauche)
-          {
-              
-            transform.position -= transform.right * Time.deltaTime * speed;
-          }
-
-        if (IsJumping)
+        //Move Velocity
+        if (CanMove)
         {
-            rb.velocity = new Vector3(rb.velocity.x, SpeedJump * Time.deltaTime, rb.velocity.z);
-            _Grounded = false;
+            if (Avant)
+            {
+                transform.position += transform.forward * Time.deltaTime * speed;
+
+            }
+            if (Reculer)
+            {
+                transform.position -= transform.forward * Time.deltaTime * speed;
+
+            }
+            if (Droite)
+            {
+                transform.position += transform.right * Time.deltaTime * speed;
+
+            }
+            if (Gauche)
+            {
+
+                transform.position -= transform.right * Time.deltaTime * speed;
+            }
+
+            if (IsJumping)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, SpeedJump * Time.deltaTime, rb.velocity.z);
+                _Grounded = false;
+            }
+
+
+
+            Gravitation(Time.fixedDeltaTime);
+
         }
-
-
-
-        Gravitation(Time.fixedDeltaTime);
-
     }
 
     // Update is called once per frame
