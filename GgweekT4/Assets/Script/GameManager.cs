@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         bool ObjetPresent = false;
         foreach (RaycastHit hit in hits)
         {
-            if  ( hit.collider.GetComponent<ItemTest>()!= null )
+            if  ( hit.collider.GetComponent<Items>()!= null )
             {
                 ObjetPresent = true;
             }
@@ -88,7 +88,17 @@ public class GameManager : MonoBehaviour
         {
             foreach (RaycastHit hit in hits)
             {
-                //if(hit.)
+                if(hit.collider.GetComponent<Items>() != null)
+                {
+                    Inventaire.instance.AddItems(hit.collider.gameObject);
+                    hit.collider.gameObject.SetActive(false);
+                    break;
+                }
+                if (hit.collider.GetComponent<ItemInteraction>() != null)
+                {
+                    hit.collider.GetComponent<ItemInteraction>().Interact();
+                    break;
+                }
             }
         }
     }
