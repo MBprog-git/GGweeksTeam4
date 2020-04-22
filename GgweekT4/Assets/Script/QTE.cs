@@ -23,10 +23,7 @@ public class QTE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            StartQTE();
-        }
+  
 
         if (EnQTE)
         {
@@ -69,6 +66,10 @@ public class QTE : MonoBehaviour
     }
     public void StartQTE()
     {
+        if (EnQTE)
+        {
+            return;
+        }
         Indic.gameObject.SetActive(true);
         Indic.text = "";
         step = 0;
