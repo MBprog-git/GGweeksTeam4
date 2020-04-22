@@ -18,7 +18,7 @@ public class Items : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        /*if (Input.GetKeyDown(KeyCode.A))
         {
             Inventaire.instance.AddItems(this.gameObject);
         }
@@ -26,7 +26,7 @@ public class Items : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Inventaire.instance.ClearItems(ID);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             ShinyOrNot = !ShinyOrNot;
