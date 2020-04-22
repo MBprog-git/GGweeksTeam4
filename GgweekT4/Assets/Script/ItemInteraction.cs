@@ -70,6 +70,7 @@ public class ItemInteraction : MonoBehaviour
         switch (idAct)
         {
             case 1:
+                GameManager.instance.Player.GetComponent<Light>().enabled = true;
                 Debug.Log("Actionada");
                 break;
         }
