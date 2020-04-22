@@ -121,6 +121,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &108761297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 989701805389036520, guid: 75d706624c4039c49bf911062c6290bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 989701805811361181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &108761298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108761297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8245d57b963ea10428318f6335ea5407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinematique:
+  - {fileID: 32900000, guid: 20269d42ad29b224385ade6c051606a5, type: 3}
 --- !u!1 &200340589
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb758503adb10e41a94dfddf13133b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surbrillance: {fileID: 0}
+  BaseM: {fileID: 0}
   ID: 1
 --- !u!1 &647282622 stripped
 GameObject:
@@ -845,6 +867,7 @@ GameObject:
   - component: {fileID: 2101784196}
   - component: {fileID: 2101784195}
   - component: {fileID: 2101784194}
+  - component: {fileID: 2101784197}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -917,6 +940,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &2101784197
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101784193}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 2101784195}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 0
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &2113207636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 341463994011554462, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,

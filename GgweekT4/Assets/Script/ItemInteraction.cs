@@ -21,7 +21,13 @@ public class ItemInteraction : MonoBehaviour
 
     public void Interact()
     {
-       
+
+        if (_Needed[0] == 100)
+        {
+            Action(IDAction);
+            return;
+        }
+
         for(int i=0; i<_Needed.Count; i++)
         {
             verif.Add(false);
