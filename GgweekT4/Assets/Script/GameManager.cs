@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
                     hit.collider.GetComponent<ItemInteraction>().Interact();
                     break;
                 }
-                if (hit.collider.GetComponent<Items>() != null)
+                if (hit.collider.GetComponent<Items>() != null && hit.collider.GetComponent<Items>().ID != 0)
                 {
                     Inventaire.instance.AddItems(hit.collider.gameObject);
                     hit.collider.gameObject.SetActive(false);

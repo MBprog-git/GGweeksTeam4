@@ -948,6 +948,7 @@ GameObject:
   - component: {fileID: 1102822521}
   - component: {fileID: 1102822520}
   - component: {fileID: 1102822519}
+  - component: {fileID: 1102822524}
   m_Layer: 0
   m_Name: Gravat a gratter
   m_TagString: Untagged
@@ -1043,6 +1044,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1102822524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102822518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb758503adb10e41a94dfddf13133b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surbrillance: {fileID: 2100000, guid: a584bf6047f932847b0710ec4729c9f2, type: 2}
+  BaseM: {fileID: 2100000, guid: 7d82587125fc05942a76e2593ef46447, type: 2}
+  ID: 0
 --- !u!1 &1225595579
 GameObject:
   m_ObjectHideFlags: 0
