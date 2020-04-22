@@ -84,6 +84,9 @@ public class ItemInteraction : MonoBehaviour
                 break;
             case 3:
                 Debug.Log("amulette placé");
+                    break;       
+            case 4:
+               this.gameObject.GetComponent<QTE>().StartQTE();
                     break;
         }
         

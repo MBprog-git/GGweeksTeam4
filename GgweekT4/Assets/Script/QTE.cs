@@ -7,12 +7,13 @@ public class QTE : MonoBehaviour
 {
     public float Temps;
     float Timer;
+  public int Idaction;  
+    public int NombreStep;
     public GameObject bar;
-  public  bool EnQTE;
+        bool EnQTE;
     int step;
     KeyCode soluce;
    public  Text Indic;
-    public int NombreStep;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +50,7 @@ public class QTE : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("QTE réussi");
+                    this.gameObject.GetComponent<ItemInteraction>().Action(Idaction);
                         EnQTE = false;
                         bar.SetActive(false);
                         Indic.gameObject.SetActive(false);
