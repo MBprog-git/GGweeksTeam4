@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public float Gravity;
     public float FallSpeedMax;
 
+   public float SpeedJump;
+   public float SpeedJumpMin;
+   public float TimeJump;
+
     [Space]
     [Header("Caméra")]
     public float SensitivityH;
@@ -64,11 +68,11 @@ public class GameManager : MonoBehaviour
         //Sélection & Interaction
             Vector3 Mouspos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(Mouspos, Cam.transform.TransformDirection(Vector3.forward), _MaxDistance);
-        Debug.DrawLine(Mouspos, Cam.transform.TransformDirection(Vector3.forward) * _MaxDistance, Color.red);
+       // Debug.DrawLine(Mouspos, Cam.transform.TransformDirection(Vector3.forward) * _MaxDistance, Color.red);
         bool ObjetPresent = false;
         foreach (RaycastHit hit in hits)
         {
-            if  ( hit.collider.GetComponent<Items>()!= null )
+            if  ( hit.collider.GetComponent<Items>()!= null || hit.collider.GetComponent<ItemInteraction>() != null)
             {
                 ObjetPresent = true;
             }
