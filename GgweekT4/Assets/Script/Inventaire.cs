@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Inventaire : MonoBehaviour
 {
     public static Inventaire instance;
+    public GameObject prefabHolder;
     private bool TurnOn = false;
     public GameObject inventaire;
-    public List<GameObject> Items_Holder = new List<GameObject>();
-
-    public List<GameObject> Item = new List<GameObject>();
+    public GameObject[] Items_Holder;
+    public GameObject[] Item;
    
 
     void Awake()
@@ -23,16 +23,46 @@ public class Inventaire : MonoBehaviour
         inventaire.SetActive(TurnOn);
         for (int i = 0; i < 16; i++)
         {
-           Items_Holder.Add(inventaire.transform.GetChild(i).gameObject);
+            Items_Holder[i] = inventaire.transform.GetChild(i).gameObject;
         }
     }
 
     public void AddItems(GameObject ItemToAdd) 
     {
-        Item.Add(ItemToAdd);
-        UpdateUi();
+        for (int i = 0; i < Item.Length; i++)
+        {
+            if (Item[i] == null)
+            {
+                Item[i] = ItemToAdd;
+                UpdateUi();
+                break;
+            }
+        }
+        
+       
     
     }
+
+    
+    
+
+    public void ClearItems(int id) 
+    {
+        for (int i = 0; i < Item.Length; i++)
+        {
+            if ( Item[i] != null && Item[i].GetComponent<Items>().ID == id)
+            {
+                Item[i] = null;
+                UpdateUi();
+                break;
+            }
+        }
+         
+    }
+
+    
+
+
 
     void ShowUi() 
     {
@@ -43,25 +73,38 @@ public class Inventaire : MonoBehaviour
 
     void UpdateUi() 
     {
-        for (int i = 0; i < Item.Count; i++)
+        for (int i = 0; i < Item.Length; i++)
         {
-            switch (Item[i].GetComponent<Items>().ID)
+            if (Item[i] != null)
             {
-                case 1:
-                    Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
-                    Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(0, 0, 0,255);
-                    break;
-                
-                case 2:
-                    Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
-                    Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(255, 0, 0,255);
-                    break;
+                switch (Item[i].GetComponent<Items>().ID)
+                {
+
+
+                    case 1:
+                        Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
+                        Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(0, 0, 0, 255);
+                        break;
+
+                    case 2:
+                        Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
+                        Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+                        break;
+
+
+                }
+            }
             
-            
+            if (Item[i] == null)
+            {
+                Items_Holder[i].transform.GetChild(0).gameObject.SetActive(false);
             }
             
         }
     }
+
+    
+
     // Update is called once per frame
     void Update()
     {
