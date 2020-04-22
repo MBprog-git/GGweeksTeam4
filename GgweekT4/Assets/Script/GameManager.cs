@@ -55,10 +55,7 @@ public class GameManager : MonoBehaviour
     {
         //Camera
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            Cam.GetComponent<FxPro>().enabled = !Cam.GetComponent<FxPro>().isActiveAndEnabled;
-        }
+        
 
         if (Input.GetMouseButtonDown(0))
         {
