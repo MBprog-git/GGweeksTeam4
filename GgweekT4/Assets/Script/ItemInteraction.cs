@@ -77,8 +77,14 @@ public class ItemInteraction : MonoBehaviour
         {
             case 1:
                 GameManager.instance.Player.GetComponent<Light>().enabled = true;
-                Debug.Log("Actionada");
+                
                 break;
+            case 2:
+                this.gameObject.SetActive(false);
+                break;
+            case 3:
+                Debug.Log("amulette placé");
+                    break;
         }
         
     }

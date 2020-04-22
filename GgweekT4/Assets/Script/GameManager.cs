@@ -95,17 +95,18 @@ public class GameManager : MonoBehaviour
         {
             foreach (RaycastHit hit in hits)
             {
-                if(hit.collider.GetComponent<Items>() != null)
-                {
-                    Inventaire.instance.AddItems(hit.collider.gameObject);
-                    hit.collider.gameObject.SetActive(false);
-                    break;
-                }
                 if (hit.collider.GetComponent<ItemInteraction>() != null)
                 {
                     hit.collider.GetComponent<ItemInteraction>().Interact();
                     break;
                 }
+                if (hit.collider.GetComponent<Items>() != null)
+                {
+                    Inventaire.instance.AddItems(hit.collider.gameObject);
+                    hit.collider.gameObject.SetActive(false);
+                    break;
+                }
+                
             }
         }
     }
