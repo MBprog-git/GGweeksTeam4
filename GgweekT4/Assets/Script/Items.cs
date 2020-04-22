@@ -27,7 +27,7 @@ public class Items : MonoBehaviour
         {
             Inventaire.instance.ClearItems(ID);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             ShinyOrNot = !ShinyOrNot;
             Shine();

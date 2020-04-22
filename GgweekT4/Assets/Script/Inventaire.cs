@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Inventaire : MonoBehaviour
 {
     public static Inventaire instance;
-    public GameObject prefabHolder;
+    
     private bool TurnOn = false;
     public GameObject inventaire;
     public GameObject[] Items_Holder;
