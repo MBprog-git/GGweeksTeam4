@@ -16,7 +16,12 @@ public class Items : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Inventaire.instance.AddItems(gameObject);
+            Inventaire.instance.AddItems(this.gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Inventaire.instance.ClearItems(ID);
         }
     }
 }
