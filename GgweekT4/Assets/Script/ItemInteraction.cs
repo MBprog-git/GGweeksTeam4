@@ -28,7 +28,7 @@ public class ItemInteraction : MonoBehaviour
         }
      
 
-        for(int i=0; i<Inventaire.instance.Items_Holder.Count; i++)
+        for(int i=0; i<Inventaire.instance.Items_Holder.Length; i++)
         {
             for(int j=0; j<_Needed.Count;i++)
             {

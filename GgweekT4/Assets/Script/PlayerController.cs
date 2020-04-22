@@ -18,10 +18,16 @@ public class PlayerController : MonoBehaviour
      float speed;
 
   
-    bool _Grounded;
+    public bool _Grounded;
     float Gravity;
     float SpeedFall;
     float SpeedFallMax;
+
+    public bool IsJumping;
+    float SpeedJump;
+    float SpeedJumpMin;
+     float TimeJump;
+      public  float Timer;
 
     public Transform Respawn;
      
@@ -32,9 +38,11 @@ public class PlayerController : MonoBehaviour
         speed = GameManager.instance.speed;
         Gravity = GameManager.instance.Gravity;
         SpeedFallMax = GameManager.instance.FallSpeedMax;
-     
+   SpeedJump= GameManager.instance.SpeedJump;
+   TimeJump=GameManager.instance.TimeJump ;
+        SpeedJumpMin = GameManager.instance.SpeedJumpMin;
 
-        rb = GetComponent<Rigidbody>();
+            rb = GetComponent<Rigidbody>();
 
     }
 
@@ -61,6 +69,14 @@ public class PlayerController : MonoBehaviour
               
             transform.position -= transform.right * Time.deltaTime * speed;
           }
+
+        if (IsJumping)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, SpeedJump * Time.deltaTime, rb.velocity.z);
+            _Grounded = false;
+        }
+
+
 
         Gravitation(Time.fixedDeltaTime);
 
@@ -106,7 +122,24 @@ public class PlayerController : MonoBehaviour
             {
                 Droite = false;
             }
-        
+
+        if (Input.GetKey(KeyCode.Space) && Timer > 0)
+        {
+            IsJumping = true;
+            Timer -= Time.fixedDeltaTime;
+
+
+        }
+        else
+        {
+            
+            IsJumping = false;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Timer = 0;
+            IsJumping = false;
+        }
 
 
     }
@@ -117,8 +150,15 @@ public class PlayerController : MonoBehaviour
         {
             SpeedFall = 0;
         }
-        else
+        else if (IsJumping)
         {
+            SpeedJump -= Gravity * DeltaTime;
+            if (SpeedJump < SpeedJumpMin)
+            {
+                SpeedJump = SpeedJumpMin;
+            }
+        }
+        else{
             SpeedFall -= Gravity * DeltaTime;
             if (SpeedFall < -SpeedFallMax)
             {
@@ -136,17 +176,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = Respawn.transform.position;
         }
-        if(collision.gameObject.tag == "Scene")
+        if(collision.gameObject.tag == "Ground")
         {
-            _Grounded = true;
+            Timer = TimeJump;
+            SpeedFall = 0;
+           _Grounded = true;
         }
 
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Scene")
+        if (collision.gameObject.tag == "Ground")
         {
             _Grounded = false;
+            
         }
         
     }
