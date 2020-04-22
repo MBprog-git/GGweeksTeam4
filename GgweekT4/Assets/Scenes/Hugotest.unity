@@ -2956,6 +2956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb758503adb10e41a94dfddf13133b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surbrillance: {fileID: 2100000, guid: a584bf6047f932847b0710ec4729c9f2, type: 2}
+  BaseM: {fileID: 2100000, guid: 7d82587125fc05942a76e2593ef46447, type: 2}
   ID: 2
 --- !u!65 &2116963687
 BoxCollider:
@@ -2988,7 +2990,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a584bf6047f932847b0710ec4729c9f2, type: 2}
+  - {fileID: 2100000, guid: 7d82587125fc05942a76e2593ef46447, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
