@@ -6,7 +6,7 @@ public class ItemInteraction : MonoBehaviour
 {
     public List<int> _Needed;
     public int IDAction;
-    List<bool> verif;
+    List<bool> verif= new List<bool>;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +51,8 @@ public class ItemInteraction : MonoBehaviour
         {
             Action(IDAction);
         }
+
+        verif.Clear();
 
     }
 
