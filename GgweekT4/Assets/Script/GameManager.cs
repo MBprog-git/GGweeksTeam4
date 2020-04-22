@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Camera
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Cam.GetComponent<FxPro>().enabled = !Cam.GetComponent<FxPro>().isActiveAndEnabled;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Cursor.lockState = CursorLockMode.Locked;

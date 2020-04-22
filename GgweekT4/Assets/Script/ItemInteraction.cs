@@ -6,7 +6,7 @@ public class ItemInteraction : MonoBehaviour
 {
     public List<int> _Needed;
     public int IDAction;
-    List<bool> verif= new List<bool>;
+    List<bool> verif= new List<bool>();
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +28,19 @@ public class ItemInteraction : MonoBehaviour
         }
      
 
-        for(int i=0; i<Inventaire.instance.Items_Holder.Length; i++)
+        for(int i=0; i<Inventaire.instance.Item.Length; i++)
         {
-            for(int j=0; j<_Needed.Count;i++)
+            if (Inventaire.instance.Item[i] != null)
             {
-                if(_Needed[j] == Inventaire.instance.Items_Holder[i].GetComponent<Items>().ID)
-                {
-                    verif[j] = true;
-                }
+
+            
+                 for(int j=0; j<_Needed.Count;j++)
+                 {
+                      if(_Needed[j] == Inventaire.instance.Item[i].GetComponent<Items>().ID)
+                     {
+                        verif[j] = true;
+                     }
+                 }
             }
         }
         bool action = true;
@@ -58,6 +63,10 @@ public class ItemInteraction : MonoBehaviour
 
     public void Action(int idAct)
     {
+        for (int i = 0; i < _Needed.Count; i++)
+        {
+            Inventaire.instance.ClearItems(_Needed[i]);
+        }
         switch (idAct)
         {
             case 1:
