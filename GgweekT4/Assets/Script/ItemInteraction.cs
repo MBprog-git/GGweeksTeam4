@@ -87,6 +87,11 @@ public class ItemInteraction : MonoBehaviour
                     break;       
             case 4:
                this.gameObject.GetComponent<QTE>().StartQTE();
+                    break;  
+            case 5:
+                GameManager.instance.Player.GetComponent<PlayerController>().CanJump = true;
+                GameManager.instance.Player.GetComponent<PlayerController>().speed += GameManager.instance.Player.GetComponent<PlayerController>().speed;
+             
                     break;
         }
         
