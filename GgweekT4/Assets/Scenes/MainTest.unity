@@ -1528,6 +1528,11 @@ PrefabInstance:
       propertyPath: RamasseFeedback
       value: 
       objectReference: {fileID: 193809149}
+    - target: {fileID: 989701805389036522, guid: 75d706624c4039c49bf911062c6290bf,
+        type: 3}
+      propertyPath: CanCam
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 989701805389036523, guid: 75d706624c4039c49bf911062c6290bf,
         type: 3}
       propertyPath: m_LocalPosition.x

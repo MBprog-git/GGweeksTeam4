@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     private float pitch = 0.0f;
     public GameObject RamasseFeedback;
     public static GameManager instance;
+    public bool CanCam = true;
 
 
 
@@ -61,13 +62,15 @@ public class GameManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        yaw += SensitivityH * Input.GetAxis("Mouse X");
-        pitch -= SensitivityV * Input.GetAxis("Mouse Y");
-        pitch = Mathf.Clamp(pitch, LimiteCamDown, LimiteCamUp);
-        Cam.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
-        Player.transform.eulerAngles = new Vector3(Player.transform.eulerAngles.x, yaw, Player.transform.eulerAngles.z);
-        Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
-
+        if (CanCam)
+        {
+            yaw += SensitivityH * Input.GetAxis("Mouse X");
+            pitch -= SensitivityV * Input.GetAxis("Mouse Y");
+            pitch = Mathf.Clamp(pitch, LimiteCamDown, LimiteCamUp);
+            Cam.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+            Player.transform.eulerAngles = new Vector3(Player.transform.eulerAngles.x, yaw, Player.transform.eulerAngles.z);
+            Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
+        }
         //Sélection & Interaction
             Vector3 Mouspos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(Mouspos, Cam.transform.TransformDirection(Vector3.forward), _MaxDistance);
