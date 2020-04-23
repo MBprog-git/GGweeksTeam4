@@ -8,7 +8,7 @@ public class VideoManager : MonoBehaviour
     public VideoClip[] cinematique;
      Camera Cam;
     VideoPlayer vd;
-
+    bool playing;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,20 +20,30 @@ public class VideoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.H))
-        {
-            vd.clip = cinematique[0];
-            vd.Play();
-        }
 
-        if (vd.isPlaying)
+        if (playing)
         {
-            GameManager.instance.Player.GetComponent<PlayerController>().CanMove = false;
-        }
-        else
-        {
-            GameManager.instance.Player.GetComponent<PlayerController>().CanMove = true;
+            if (vd.isPlaying)
+            {
+                GameManager.instance.Player.GetComponent<PlayerController>().CanMove = false;
+            }
+            else
+            {
+                GameManager.instance.Player.GetComponent<PlayerController>().CanMove = true;
+                if (this.gameObject.GetComponent<Dialogue>() != null)
+                {
+                    this.gameObject.GetComponent<Dialogue>().StartDialogue();
+                }
+                playing = false;
 
+            }
         }
+    }
+
+    public void PlayVideo(int video)
+    {
+        vd.clip = cinematique[video];
+        vd.Play();
+        playing = true;
     }
 }

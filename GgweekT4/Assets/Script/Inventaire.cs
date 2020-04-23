@@ -53,6 +53,10 @@ public class Inventaire : MonoBehaviour
             if (Item[i] == null)
             {
                 Item[i] = ItemToAdd;
+                if(ItemToAdd.GetComponent<Dialogue>() != null)
+                {
+                    ItemToAdd.GetComponent<Dialogue>().StartDialogue();
+                }
                 UpdateUi();
                 break;
             }

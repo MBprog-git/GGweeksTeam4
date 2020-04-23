@@ -96,6 +96,10 @@ public class GameManager : MonoBehaviour
             if  ( hit.collider.GetComponent<Items>()!= null || hit.collider.GetComponent<ItemInteraction>() != null)
             {
                 ObjetPresent = true;
+                if(hit.collider.GetComponent<Dialogue>() != null && !hit.collider.GetComponent<Dialogue>().played && hit.collider.GetComponent<Dialogue>().Voyeur)
+                {
+                    hit.collider.GetComponent<Dialogue>().StartDialogue();
+                }
             }
         }
             if (ObjetPresent)
@@ -108,6 +112,7 @@ public class GameManager : MonoBehaviour
                 RamasseFeedback.SetActive(false);
 
             }
+
 
         if (Input.GetMouseButtonUp(0))
         {
