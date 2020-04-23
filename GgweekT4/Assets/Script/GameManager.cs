@@ -53,9 +53,23 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+
+            Cam.GetComponent<Caméra>().SeeThrougt();
+            foreach(Items item in Resources.FindObjectsOfTypeAll(typeof(Items))) 
+            {
+                item.Shine();
+            
+            }
+        }
+
+
+
         //Camera
 
-        
+
 
         if (Input.GetMouseButtonDown(0))
         {

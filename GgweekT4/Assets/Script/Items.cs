@@ -12,30 +12,20 @@ public class Items : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Mesh = gameObject.GetComponent<MeshRenderer>();
+        Mesh = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.A))
-        {
-            Inventaire.instance.AddItems(this.gameObject);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Inventaire.instance.ClearItems(ID);
-        }*/
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            ShinyOrNot = !ShinyOrNot;
-            Shine();
-        }
+       
+        
     }
 
-    void Shine() 
+    public void Shine() 
     {
+        ShinyOrNot = !ShinyOrNot;
+
         if (ShinyOrNot)
         {
             Mesh.sharedMaterial = surbrillance;

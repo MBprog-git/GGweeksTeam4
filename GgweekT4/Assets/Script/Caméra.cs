@@ -16,10 +16,7 @@ public class Caméra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            SuperVision.enabled = !SuperVision.isActiveAndEnabled;
-        }
+        
         
     }
 
@@ -27,6 +24,12 @@ public class Caméra : MonoBehaviour
     {
         Etourdit.enabled = !Etourdit.isActiveAndEnabled;
 
+
+    }
+
+    public void SeeThrougt() 
+    {
+        SuperVision.enabled = !SuperVision.isActiveAndEnabled;
 
     }
 }
