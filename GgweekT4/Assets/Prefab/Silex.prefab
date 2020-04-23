@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4399782878006691847}
   - component: {fileID: 5483299920130027648}
   - component: {fileID: 8809955185307968642}
+  - component: {fileID: 8508568201981718896}
   m_Layer: 0
   m_Name: Silex
   m_TagString: Untagged
@@ -95,3 +96,17 @@ MonoBehaviour:
   surbrillance: {fileID: 2100000, guid: a584bf6047f932847b0710ec4729c9f2, type: 2}
   BaseM: {fileID: 2100000, guid: 7d82587125fc05942a76e2593ef46447, type: 2}
   ID: 1
+--- !u!64 &8508568201981718896
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411305771659803564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6448369875865109982, guid: 4f5860278d3e41d43b6a496904db8686, type: 3}
