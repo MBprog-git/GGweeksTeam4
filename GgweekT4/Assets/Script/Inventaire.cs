@@ -67,6 +67,7 @@ public class Inventaire : MonoBehaviour
     void ShowUi() 
     {
         GameManager.instance.Player.GetComponent<PlayerController>().CanMove = !GameManager.instance.Player.GetComponent<PlayerController>().CanMove;
+        GameManager.instance.Cancam = !GameManager.instance.Cancam;
         TurnOn = !TurnOn;
         inventaire.SetActive(TurnOn);
     
