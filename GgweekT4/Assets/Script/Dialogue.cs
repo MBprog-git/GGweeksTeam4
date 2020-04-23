@@ -11,6 +11,8 @@ public class Dialogue : MonoBehaviour
     int step;
     bool EnDialogue;
     public int IDaction;
+    public bool played;
+    public bool Voyeur;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class Dialogue : MonoBehaviour
             if(step+1 == dialogues.Count)
             {
                 EnDialogue = false;
+                played = true;
                 txt.text = "";
                 txt.gameObject.SetActive(false);
                 box.gameObject.SetActive(false);

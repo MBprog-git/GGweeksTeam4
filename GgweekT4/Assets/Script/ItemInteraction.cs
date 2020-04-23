@@ -81,13 +81,14 @@ public class ItemInteraction : MonoBehaviour
         {
             case 1:
                 GameManager.instance.Player.GetComponent<Light>().enabled = true;
+                this.gameObject.GetComponent<Dialogue>().StartDialogue();
                 
                 break;
             case 2:
                 this.gameObject.SetActive(false);
                 break;
             case 3:
-                Debug.Log("amulette placé");
+                                 ///LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIBRE
                     break;       
             case 4:
                this.gameObject.GetComponent<QTE>().StartQTE();
@@ -102,8 +103,13 @@ public class ItemInteraction : MonoBehaviour
 
             case 7:this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 GameManager.instance.Door.GetComponent<Animation>().Play(GameManager.instance.Door.GetComponent<Animation>().clip.name);
+                this.gameObject.GetComponent<Dialogue>().StartDialogue();
 
                     break;
+            case 8:
+                GameManager.instance.gameObject.GetComponent<VideoManager>().PlayVideo(1);
+                break;
+            
         }
         
     }
