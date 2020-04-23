@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public float FallSpeedMax;
 
    public float SpeedJump;
+   
    public float SpeedJumpMin;
    public float TimeJump;
 
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     private float yaw = 0.0f;
     private float pitch = 0.0f;
     public GameObject RamasseFeedback;
+    public GameObject Door;
     public static GameManager instance;
 
     public bool Cancam = true;

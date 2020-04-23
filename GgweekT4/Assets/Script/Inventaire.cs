@@ -8,10 +8,29 @@ public class Inventaire : MonoBehaviour
     public static Inventaire instance;
     
     private bool TurnOn = false;
+    public List<Sprite> icon = new List<Sprite>();
     public GameObject inventaire;
     public GameObject[] Items_Holder;
     public GameObject[] Item;
    
+
+    /* 1:Silex
+     * 2: bois
+     * 3:tissus
+     * 
+     * 5: amulette
+     
+     
+         
+         
+         */
+
+
+
+
+
+
+
 
     void Awake()
     {
@@ -79,22 +98,11 @@ public class Inventaire : MonoBehaviour
         {
             if (Item[i] != null)
             {
-                switch (Item[i].GetComponent<Items>().ID)
-                {
+                Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
+             
+                        Items_Holder[i].transform.GetChild(0).GetComponent<Image>().sprite = icon[Item[i].GetComponent<Items>().ID];
+                        
 
-
-                    case 1:
-                        Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
-                        Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(0, 0, 0, 255);
-                        break;
-
-                    case 2:
-                        Items_Holder[i].transform.GetChild(0).gameObject.SetActive(true);
-                        Items_Holder[i].transform.GetChild(0).GetComponent<Image>().color = new Color32(255, 0, 0, 255);
-                        break;
-
-
-                }
             }
             
             if (Item[i] == null)

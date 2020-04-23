@@ -99,6 +99,11 @@ public class ItemInteraction : MonoBehaviour
             case 6:
                 this.gameObject.GetComponent<Dialogue>().StartDialogue();
                 break;
+
+            case 7:this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                GameManager.instance.Door.GetComponent<Animation>().Play(GameManager.instance.Door.GetComponent<Animation>().clip.name);
+
+                    break;
         }
         
     }
