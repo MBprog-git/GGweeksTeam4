@@ -37,6 +37,7 @@ public class QTE : MonoBehaviour
                 bar.SetActive(false);
                 Indic.gameObject.SetActive(false);
                 GameManager.instance.Player.GetComponent<PlayerController>().CanMove = true;
+                GameManager.instance.Cancam = true;
             }
             else if (Input.GetKeyDown(soluce))
             {
@@ -52,6 +53,7 @@ public class QTE : MonoBehaviour
                         bar.SetActive(false);
                         Indic.gameObject.SetActive(false);
                         GameManager.instance.Player.GetComponent<PlayerController>().CanMove = true;
+                        GameManager.instance.Cancam = true;
                 }
             }/*else if (Input.anyKeyDown)
             {
@@ -76,6 +78,7 @@ public class QTE : MonoBehaviour
         bar.SetActive(true);
         GameManager.instance.Player.GetComponent<PlayerController>().CanMove = false;
         EnQTE = true;
+        GameManager.instance.Cancam = false;
         StartRound();
     }
     public void StartRound()
