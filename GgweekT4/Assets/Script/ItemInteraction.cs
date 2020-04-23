@@ -7,6 +7,7 @@ public class ItemInteraction : MonoBehaviour
     public List<int> _Needed;
     public int IDAction;
     List<bool> verif= new List<bool>();
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -69,9 +70,12 @@ public class ItemInteraction : MonoBehaviour
 
     public void Action(int idAct)
     {
-        for (int i = 0; i < _Needed.Count; i++)
+        if (_Needed[0] != 100)
         {
-            Inventaire.instance.ClearItems(_Needed[i]);
+            for (int i = 0; i < _Needed.Count; i++)
+            {
+                Inventaire.instance.ClearItems(_Needed[i]);
+            }
         }
         switch (idAct)
         {
@@ -91,8 +95,10 @@ public class ItemInteraction : MonoBehaviour
             case 5:
                 GameManager.instance.Player.GetComponent<PlayerController>().CanJump = true;
                 GameManager.instance.Player.GetComponent<PlayerController>().speed += GameManager.instance.Player.GetComponent<PlayerController>().speed;
-             
                     break;
+            case 6:
+                this.gameObject.GetComponent<Dialogue>().StartDialogue();
+                break;
         }
         
     }
