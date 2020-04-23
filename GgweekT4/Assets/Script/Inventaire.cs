@@ -66,6 +66,7 @@ public class Inventaire : MonoBehaviour
 
     void ShowUi() 
     {
+        GameManager.instance.Player.GetComponent<PlayerController>().CanMove = !GameManager.instance.Player.GetComponent<PlayerController>().CanMove;
         TurnOn = !TurnOn;
         inventaire.SetActive(TurnOn);
     
@@ -110,6 +111,7 @@ public class Inventaire : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+
             ShowUi();
         }
     }
