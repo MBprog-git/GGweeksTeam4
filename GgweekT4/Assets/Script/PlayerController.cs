@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
  
 
 
-     float speed;
+   public  float speed;
 
     public bool CanMove = true;
   
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     float SpeedJumpMin;
      float TimeJump;
       public  float Timer;
+    public bool CanJump;
 
     public Transform Respawn;
      
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = GameManager.instance.speed;
+        speed = GameManager.instance.speed/2;
         Gravity = GameManager.instance.Gravity;
         SpeedFallMax = GameManager.instance.FallSpeedMax;
    SpeedJump= GameManager.instance.SpeedJump;
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour
                 Droite = false;
             }
 
-        if (Input.GetKey(KeyCode.Space) && Timer > 0)
+        if (Input.GetKey(KeyCode.Space) && Timer > 0 && CanJump)
         {
             IsJumping = true;
             Timer -= Time.fixedDeltaTime;
