@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public GameObject BoxDialogue;
     public Text  TxtDialogue;
     public static GameManager instance;
-
+    public float timedialogue;
     public bool Cancam = true;
     private Vector3 _velocity = Vector3.zero;
     void Awake()
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Dialogue>().StartDialogue();
         Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
     }
 
@@ -108,10 +109,11 @@ public class GameManager : MonoBehaviour
             if  ( hit.collider.GetComponent<Items>()!= null || hit.collider.GetComponent<ItemInteraction>() != null)
             {
                 ObjetPresent = true;
-                if(hit.collider.GetComponent<Dialogue>() != null && !hit.collider.GetComponent<Dialogue>().played && hit.collider.GetComponent<Dialogue>().Voyeur)
-                {
-                    hit.collider.GetComponent<Dialogue>().StartDialogue();
-                }
+                
+            }
+            if (hit.collider.GetComponent<Dialogue>() != null && !hit.collider.GetComponent<Dialogue>().played && hit.collider.GetComponent<Dialogue>().Voyeur)
+            {
+                hit.collider.GetComponent<Dialogue>().StartDialogue();
             }
         }
             if (ObjetPresent)

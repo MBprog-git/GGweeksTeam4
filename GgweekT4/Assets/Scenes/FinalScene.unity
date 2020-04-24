@@ -1008,6 +1008,7 @@ GameObject:
   - component: {fileID: 164012590}
   - component: {fileID: 164012589}
   - component: {fileID: 164012593}
+  - component: {fileID: 164012594}
   m_Layer: 0
   m_Name: Obstacle (1)
   m_TagString: Untagged
@@ -1121,6 +1122,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Needed: 64000000
   IDAction: 4
+--- !u!114 &164012594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164012587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 0
+  dialogues:
+  - "Cette portion de roche semble de nature diff\xE9rente de celle de la grotte. "
+  IDaction: 0
+  played: 0
+  Voyeur: 1
 --- !u!4 &172432520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a532dbf754d282b47aae2cdf56ece2ef,
@@ -1219,6 +1238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1133899836}
     m_Modifications:
+    - target: {fileID: 15735179472099811, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2609172426249261224, guid: 7737a372fbad6104b8b98ce1aab47a79,
         type: 3}
       propertyPath: m_Name
@@ -1328,6 +1352,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215274321780749025, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737a372fbad6104b8b98ce1aab47a79, type: 3}
@@ -1963,6 +2022,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea860b0b0145c9646aa38a669e7e6d3f, type: 3}
+--- !u!1 &284014833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5949784769759917968, guid: ea860b0b0145c9646aa38a669e7e6d3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 284014832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &284014834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284014833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 0
+  dialogues:
+  - "C\u2019est d\xE9j\xE0 mieux. Cet endroit est vraiment sinistre.  "
+  IDaction: 0
+  played: 0
+  Voyeur: 0
 --- !u!1001 &298998311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2352,6 +2435,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 572d540c886da0c4aa4f64f1ea553814, type: 3}
+--- !u!114 &365529321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8426738875366920275, guid: 7737a372fbad6104b8b98ce1aab47a79,
+    type: 3}
+  m_PrefabInstance: {fileID: 185089797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &377713613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 572d540c886da0c4aa4f64f1ea553814,
@@ -3635,6 +3730,21 @@ PrefabInstance:
       propertyPath: _speedSmooth
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 989701805389036522, guid: 75d706624c4039c49bf911062c6290bf,
+        type: 3}
+      propertyPath: timedialogue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 989701805389036522, guid: 75d706624c4039c49bf911062c6290bf,
+        type: 3}
+      propertyPath: BoxDialogue
+      value: 
+      objectReference: {fileID: 825826082}
+    - target: {fileID: 989701805389036522, guid: 75d706624c4039c49bf911062c6290bf,
+        type: 3}
+      propertyPath: TxtDialogue
+      value: 
+      objectReference: {fileID: 365529321}
     - target: {fileID: 989701805389036523, guid: 75d706624c4039c49bf911062c6290bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3692,6 +3802,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d706624c4039c49bf911062c6290bf, type: 3}
+--- !u!1 &557425744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 989701805389036520, guid: 75d706624c4039c49bf911062c6290bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 557425743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &557425745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557425744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 5
+  dialogues:
+  - "Samir : Arrrgh ma jambe ! Elle est cass\xE9e ! Arrgh \xE7a fait un mal de chien, 
+    j\u2019ai du tomber de cette falaise. "
+  IDaction: 0
+  played: 0
+  Voyeur: 0
 --- !u!1001 &565762993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5890,12 +6025,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1837166426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &825826082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6215274321780749025, guid: 7737a372fbad6104b8b98ce1aab47a79,
+    type: 3}
+  m_PrefabInstance: {fileID: 185089797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &826281835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4f5860278d3e41d43b6a496904db8686,
     type: 3}
   m_PrefabInstance: {fileID: 450401232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &831318000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831318004}
+  - component: {fileID: 831318003}
+  - component: {fileID: 831318002}
+  - component: {fileID: 831318001}
+  m_Layer: 0
+  m_Name: Dialogue zone noir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &831318001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831318000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 0
+  dialogues:
+  - "Samir : O\xF9 est ce que je suis l\xE0  ? On dirait une grotte naturelle\u2026
+    On y voit pas \xE0 2 m\xE8tres, il faut que j\u2019\xE9claire la pi\xE8ce . Ce
+    tissu ferait un bon combustible.  "
+  IDaction: 0
+  played: 0
+  Voyeur: 0
+--- !u!114 &831318002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831318000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ed68a5cfb205b4fab2bd92220f01ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &831318003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831318000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 4.32}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &831318004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831318000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.38, y: 99.08, z: 120.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &836091229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a532dbf754d282b47aae2cdf56ece2ef,
@@ -7255,6 +7474,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1687670554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1034059431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6191062918796007980, guid: 81c8fb1e68329cf4598a225d42178ce5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1050475417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034059432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034059431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 0
+  dialogues:
+  - "Une porte qui s\u2019ouvre avec une ancienne amulette \u2026 pfff on est dans
+    Tomb Raider ou quoi ?"
+  IDaction: 0
+  played: 0
+  Voyeur: 0
 --- !u!4 &1037928058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4f5860278d3e41d43b6a496904db8686,
@@ -9277,6 +9521,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317691832}
+  - component: {fileID: 1317691834}
+  - component: {fileID: 1317691833}
   m_Layer: 0
   m_Name: Feu de camp
   m_TagString: Untagged
@@ -9307,6 +9553,38 @@ Transform:
   m_Father: {fileID: 699628286}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317691833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317691831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIME: 0
+  dialogues:
+  - "Samir : il y\u2019a un feu de camp ici, quelqu\u2019un a donc pu allumer un
+    feu, mais comment ?"
+  IDaction: 0
+  played: 0
+  Voyeur: 1
+--- !u!65 &1317691834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317691831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.55, y: 0.32, z: 0.46}
+  m_Center: {x: 0.12, y: 0.26, z: 0.1}
 --- !u!1001 &1348902165
 PrefabInstance:
   m_ObjectHideFlags: 0
