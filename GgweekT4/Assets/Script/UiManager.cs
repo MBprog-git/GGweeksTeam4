@@ -33,7 +33,7 @@ public class UiManager : MonoBehaviour
 
 
 
-            NbrObject.text = other.GetComponent<Info_Ui>().Objectif;
+            NbrObject.text = "" + other.GetComponent<Info_Ui>().Nbr;
         }
         
     }

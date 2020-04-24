@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     public GameObject RamasseFeedback;
     public GameObject Door;
     public GameObject BoxDialogue;
+    public GameObject InfoUi1;
+    public GameObject InfoUi2;
     public Text  TxtDialogue;
     public static GameManager instance;
     public float timedialogue;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         GetComponent<Dialogue>().StartDialogue();
         Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
     }
