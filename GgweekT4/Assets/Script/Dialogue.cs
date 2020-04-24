@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject box;
-    public Text txt;
+    GameObject box;
+    Text txt;
+    public float TIME;
     public List<string> dialogues;
     int step;
     bool EnDialogue;
@@ -16,13 +17,15 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        TIME = GameManager.instance.timedialogue;
+        box = GameManager.instance.BoxDialogue;
+        txt = GameManager.instance.TxtDialogue;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(EnDialogue && Input.GetKeyDown(KeyCode.Return))
+        /*if(EnDialogue && Input.GetKeyDown(KeyCode.Return))
         {
             
             if(step+1 == dialogues.Count)
@@ -42,17 +45,28 @@ public class Dialogue : MonoBehaviour
                 step++;
                 txt.text = dialogues[step];
             }
-        }
+        }*/
     }
-public void StartDialogue()
+    public void StartDialogue()
     {
-        GameManager.instance.Cancam = false;
-        GameManager.instance.Player.GetComponent<PlayerController>().CanMove = false;
-        step = 0;
+        /* GameManager.instance.Cancam = false;
+         GameManager.instance.Player.GetComponent<PlayerController>().CanMove = false;
+         step = 0;
+         box.SetActive(true);
+         txt.gameObject.SetActive(true);
+         EnDialogue = true;
+         txt.text = dialogues[step];*/
+        txt.text = dialogues[0];
         box.SetActive(true);
-        txt.gameObject.SetActive(true);
         EnDialogue = true;
-        txt.text = dialogues[step];
+        StartCoroutine(DSpawn());
+    }
 
+    IEnumerator DSpawn()
+    {
+        yield return new WaitForSeconds(TIME);
+        EnDialogue = false;
+        box.SetActive(false);
+        played = true;  
     }
 }

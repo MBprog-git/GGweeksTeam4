@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
     public float LimiteCamDown = -90;
     public float LimiteCamUp = 15;
 
+    public float _speedSmooth;
+
     [Space]
    public  float _MaxDistance;
     
@@ -38,10 +42,12 @@ public class GameManager : MonoBehaviour
     private float pitch = 0.0f;
     public GameObject RamasseFeedback;
     public GameObject Door;
+    public GameObject BoxDialogue;
+    public Text  TxtDialogue;
     public static GameManager instance;
-
+    public float timedialogue;
     public bool Cancam = true;
-
+    private Vector3 _velocity = Vector3.zero;
     void Awake()
     {
         if (instance == null)
@@ -50,6 +56,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Dialogue>().StartDialogue();
+        Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
     }
 
     // Update is called once per frame
@@ -84,8 +92,13 @@ public class GameManager : MonoBehaviour
             pitch = Mathf.Clamp(pitch, LimiteCamDown, LimiteCamUp);
             Cam.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
             Player.transform.eulerAngles = new Vector3(Player.transform.eulerAngles.x, yaw, Player.transform.eulerAngles.z);
-            Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
-        }
+            // Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
+            
+            Vector3 newPosCam = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
+            newPosCam = Vector3.SmoothDamp(Cam.transform.position, newPosCam, ref _velocity, _speedSmooth);
+
+        Cam.transform.position = new Vector3(newPosCam.x, newPosCam.y, newPosCam.z);
+    }
         //Sélection & Interaction
             Vector3 Mouspos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(Mouspos, Cam.transform.TransformDirection(Vector3.forward), _MaxDistance);
@@ -96,10 +109,11 @@ public class GameManager : MonoBehaviour
             if  ( hit.collider.GetComponent<Items>()!= null || hit.collider.GetComponent<ItemInteraction>() != null)
             {
                 ObjetPresent = true;
-                if(hit.collider.GetComponent<Dialogue>() != null && !hit.collider.GetComponent<Dialogue>().played && hit.collider.GetComponent<Dialogue>().Voyeur)
-                {
-                    hit.collider.GetComponent<Dialogue>().StartDialogue();
-                }
+                
+            }
+            if (hit.collider.GetComponent<Dialogue>() != null && !hit.collider.GetComponent<Dialogue>().played && hit.collider.GetComponent<Dialogue>().Voyeur)
+            {
+                hit.collider.GetComponent<Dialogue>().StartDialogue();
             }
         }
             if (ObjetPresent)
