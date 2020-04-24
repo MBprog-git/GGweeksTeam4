@@ -3,7 +3,22 @@ guid: 3daf16f2f0f340a47be7c9e65cafd793
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder.002_Cylinder.005_Cylinder.002_Cylinder.005_FeuxdecampPierreMat
+    second: {fileID: 2100000, guid: afbca40caef219f47ba4faf4bc0e83ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder.002_Cylinder.005_Cylinder.002_Cylinder.005_feuxdecampcendreMat
+    second: {fileID: 2100000, guid: 28e264ad5f7fbbe47b9605dd4b076fe8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder.002_Cylinder.005_Cylinder.002_Cylinder.005_feuxdecampsboisMat
+    second: {fileID: 2100000, guid: 1a504d820c7485641ba788c30da2dcad, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
