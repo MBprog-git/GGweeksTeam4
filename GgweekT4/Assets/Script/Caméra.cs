@@ -20,9 +20,20 @@ public class Caméra : MonoBehaviour
         
     }
 
-    public void etourdis() 
+    public void etourdis(string onOrOff) 
     {
-        Etourdit.enabled = !Etourdit.isActiveAndEnabled;
+        if (onOrOff == "On")
+        {
+            Etourdit.enabled = true;
+
+        }
+
+        if (onOrOff == "Off")
+        {
+            Etourdit.enabled = false;
+
+        }
+
 
 
     }
