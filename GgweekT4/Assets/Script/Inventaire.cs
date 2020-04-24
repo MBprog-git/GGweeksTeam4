@@ -20,10 +20,7 @@ public class Inventaire : MonoBehaviour
      * 
      * 5: amulette
      
-     
-         
-         
-         */
+    */
 
 
 
