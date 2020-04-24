@@ -3630,6 +3630,11 @@ PrefabInstance:
       propertyPath: Door
       value: 
       objectReference: {fileID: 1058091781420822895}
+    - target: {fileID: 989701805389036522, guid: 75d706624c4039c49bf911062c6290bf,
+        type: 3}
+      propertyPath: _speedSmooth
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 989701805389036523, guid: 75d706624c4039c49bf911062c6290bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4003,6 +4008,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1089256693}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &619106330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619106332}
+  - component: {fileID: 619106331}
+  m_Layer: 0
+  m_Name: Rampe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &619106331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619106330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &619106332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619106330}
+  m_LocalRotation: {x: -0.048780877, y: -0.54230314, z: 0.07514467, w: 0.8353928}
+  m_LocalPosition: {x: 49.55, y: 98.6, z: 145.57}
+  m_LocalScale: {x: 9.94, y: 1, z: 5.59}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -65.98, z: 10.28}
 --- !u!1001 &621140408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5791,6 +5840,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 547784644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &811141883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811141885}
+  - component: {fileID: 811141884}
+  m_Layer: 0
+  m_Name: Rampe (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &811141884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811141883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &811141885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811141883}
+  m_LocalRotation: {x: -0.048780877, y: -0.54230314, z: 0.07514467, w: 0.8353928}
+  m_LocalPosition: {x: 49.55, y: 98.52, z: 145.57}
+  m_LocalScale: {x: 10.94, y: 1, z: 6.72}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -65.98, z: 10.28}
 --- !u!4 &821848193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4f5860278d3e41d43b6a496904db8686,
@@ -16405,7 +16498,7 @@ PrefabInstance:
     - target: {fileID: 341463994011554461, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 341463994011554462, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
         type: 3}
