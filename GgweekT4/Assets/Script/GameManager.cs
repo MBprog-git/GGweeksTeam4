@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
     private float pitch = 0.0f;
     public GameObject RamasseFeedback;
     public GameObject Door;
+    public GameObject BoxDialogue;
+    public Text  TxtDialogue;
     public static GameManager instance;
 
     public bool Cancam = true;

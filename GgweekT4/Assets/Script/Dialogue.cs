@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject box;
-    public Text txt;
+     GameObject box;
+     Text txt;
     public List<string> dialogues;
     int step;
     bool EnDialogue;
@@ -16,7 +16,8 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       box= GameManager.instance.BoxDialogue;
+       txt = GameManager.instance.TxtDialogue;
     }
 
     // Update is called once per frame
