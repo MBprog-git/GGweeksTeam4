@@ -628,7 +628,6 @@ MonoBehaviour:
   Door: {fileID: 0}
   BoxDialogue: {fileID: 0}
   InfoUi1: {fileID: 0}
-  InfoUi2: {fileID: 0}
   TxtDialogue: {fileID: 0}
   timedialogue: 0
   Cancam: 1
