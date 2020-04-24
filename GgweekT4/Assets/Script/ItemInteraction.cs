@@ -109,6 +109,10 @@ public class ItemInteraction : MonoBehaviour
             case 8:
                 GameManager.instance.gameObject.GetComponent<VideoManager>().PlayVideo(1);
                 break;
+            case 9:gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case 10: //Cinematique
+                break;
             
         }
         

@@ -17,9 +17,11 @@ public class Inventaire : MonoBehaviour
     /* 1:Silex
      * 2: bois
      * 3:tissus
-     * 
+     * 4:P1
      * 5: amulette
-     
+       6:P2
+       7:P3
+       8:Fiole
     */
 
 

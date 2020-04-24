@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public float timedialogue;
     public bool Cancam = true;
+    public bool CanSee = false;
     private Vector3 _velocity = Vector3.zero;
     void Awake()
     {
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && CanSee)
         {
 
             Cam.GetComponent<Caméra>().SeeThrougt();
