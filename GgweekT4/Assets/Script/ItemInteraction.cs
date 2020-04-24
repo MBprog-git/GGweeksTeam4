@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemInteraction : MonoBehaviour
 {
     public List<int> _Needed;
     public int IDAction;
     List<bool> verif= new List<bool>();
+    GameObject livre;
   
     // Start is called before the first frame update
     void Start()
     {
-        
+        livre = GameManager.instance.livre;
     }
 
     // Update is called once per frame
@@ -105,13 +107,16 @@ public class ItemInteraction : MonoBehaviour
                 GameManager.instance.Door.GetComponent<Animation>().Play(GameManager.instance.Door.GetComponent<Animation>().clip.name);
                 this.gameObject.GetComponent<Dialogue>().StartDialogue();
 
-                    break;
+                SceneManager.LoadScene("Menu");
+
+                break;
             case 8:
-                GameManager.instance.gameObject.GetComponent<VideoManager>().PlayVideo(1);
+             //LIIIIIIIIIIIIIIIBRE
                 break;
             case 9:gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 break;
-            case 10: //Cinematique
+            case 10:
+                GameManager.instance.gameObject.GetComponent<VideoManager>().PlayVideo(1);
                 break;
             
         }

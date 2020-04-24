@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("FinalScene");
+        SceneManager.LoadScene("Cinescene");
     }
     public void Option()
     {

@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour
     public bool Cancam = true;
     public bool CanSee = false;
     private Vector3 _velocity = Vector3.zero;
+
+    public GameObject livre;
+
     void Awake()
     {
         if (instance == null)
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         GetComponent<Dialogue>().StartDialogue();
         Cam.transform.position = new Vector3(Player.transform.position.x + OffsetX, Player.transform.position.y + OffsetY, Player.transform.position.z + OffsetZ);
     }
