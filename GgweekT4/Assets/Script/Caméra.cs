@@ -6,6 +6,8 @@ public class Caméra : MonoBehaviour
 {
     public FxPro SuperVision;
     public FxPro Etourdit;
+    public bool etourdit = false;
+    public bool super = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +24,17 @@ public class Caméra : MonoBehaviour
 
     public void etourdis(string onOrOff) 
     {
-        if (onOrOff == "On")
+        if (onOrOff == "On" && !super)
         {
             Etourdit.enabled = true;
+            etourdit = true;
 
         }
 
         if (onOrOff == "Off")
         {
             Etourdit.enabled = false;
-
+            etourdit = false;
         }
 
 
@@ -40,7 +43,12 @@ public class Caméra : MonoBehaviour
 
     public void SeeThrougt() 
     {
-        SuperVision.enabled = !SuperVision.isActiveAndEnabled;
+        if (!etourdit)
+        {
+            SuperVision.enabled = !SuperVision.isActiveAndEnabled;
+            super = !super;
+        }
+        
 
     }
 }
