@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public GameObject Door;
     public GameObject BoxDialogue;
     public GameObject InfoUi1;
-    public GameObject InfoUi2;
+   // public GameObject InfoUi2;
     public Text  TxtDialogue;
     public static GameManager instance;
     public float timedialogue;
