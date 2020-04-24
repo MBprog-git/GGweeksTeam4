@@ -56,7 +56,7 @@ public class Inventaire : MonoBehaviour
                 }
                 UpdateUi();
                 GameManager.instance.InfoUi1.GetComponent<Info_Ui>().Decount(ItemToAdd.GetComponent<Items>().ID);
-                GameManager.instance.InfoUi2.GetComponent<Info_Ui>().Decount(ItemToAdd.GetComponent<Items>().ID);
+                //GameManager.instance.InfoUi2.GetComponent<Info_Ui>().Decount(ItemToAdd.GetComponent<Items>().ID);
                 break;
             }
         }
