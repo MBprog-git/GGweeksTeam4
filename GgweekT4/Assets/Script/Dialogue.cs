@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
     public bool played;
     public bool Voyeur;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         TIME = GameManager.instance.timedialogue;
         box = GameManager.instance.BoxDialogue;

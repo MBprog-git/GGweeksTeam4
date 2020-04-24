@@ -627,7 +627,10 @@ MonoBehaviour:
   RamasseFeedback: {fileID: 507458521}
   Door: {fileID: 0}
   BoxDialogue: {fileID: 0}
+  InfoUi1: {fileID: 0}
+  InfoUi2: {fileID: 0}
   TxtDialogue: {fileID: 0}
+  timedialogue: 0
   Cancam: 1
 --- !u!114 &657743480
 MonoBehaviour:
@@ -968,6 +971,11 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5651704233601548069, guid: 7737a372fbad6104b8b98ce1aab47a79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737a372fbad6104b8b98ce1aab47a79, type: 3}
 --- !u!1 &1701609279
@@ -1061,6 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1dcd40b6744d54588849596ebb1891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TIME: 0
   dialogues:
   - "Je suis bloqu\xE9"
   - "Et d\xE9pressif"
