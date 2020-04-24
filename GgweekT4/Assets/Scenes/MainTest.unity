@@ -423,6 +423,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1139689743415020481, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
+        type: 3}
+      propertyPath: Objectif
+      value: 
+      objectReference: {fileID: 476944144}
+    - target: {fileID: 1139689743415020481, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
+        type: 3}
+      propertyPath: Description
+      value: 
+      objectReference: {fileID: 1215196330}
+    - target: {fileID: 1139689743415020481, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
+        type: 3}
+      propertyPath: Room_name
+      value: 
+      objectReference: {fileID: 140300447}
+    - target: {fileID: 1139689743415020481, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
+        type: 3}
+      propertyPath: ObjectToGet
+      value: 
+      objectReference: {fileID: 1186450758}
+    - target: {fileID: 1139689743415020481, guid: ccc8150dc11cbef43b91fd4e57f6cd0d,
+        type: 3}
+      propertyPath: NbrObject
+      value: 
+      objectReference: {fileID: 1481922158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc8150dc11cbef43b91fd4e57f6cd0d, type: 3}
 --- !u!1 &61422739 stripped
@@ -431,23 +456,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 61422738}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &61422740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61422739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8ff88e282a1604eb30ac7555a77688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Objectif: {fileID: 476944144}
-  Description: {fileID: 1215196330}
-  Room_name: {fileID: 140300447}
-  ObjectToGet: {fileID: 1186450758}
-  NbrObject: {fileID: 1481922158}
 --- !u!108 &61422746
 Light:
   m_ObjectHideFlags: 0

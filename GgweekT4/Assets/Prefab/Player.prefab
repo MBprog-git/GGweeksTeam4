@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 341463994011554460}
   - component: {fileID: 341463994011554463}
   - component: {fileID: 341463994011554448}
+  - component: {fileID: 1139689743415020481}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,7 +125,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03231bfe027dc5e4b8e207ec17b1844f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  CanMove: 1
   _Grounded: 0
   IsJumping: 0
   Timer: 0
+  CanJump: 0
   Respawn: {fileID: 0}
+--- !u!114 &1139689743415020481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341463994011554462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8ff88e282a1604eb30ac7555a77688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objectif: {fileID: 0}
+  Description: {fileID: 0}
+  Room_name: {fileID: 0}
+  ObjectToGet: {fileID: 0}
+  NbrObject: {fileID: 0}
